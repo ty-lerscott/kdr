@@ -1,0 +1,27 @@
+@import "universal";
+@import "mixins";
+@import "breakpoints";
+
+section.history{
+	@import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=greek,latin);
+	font-family:'open_sanssemibold';
+	
+	h2{
+		font-family: 'Ubuntu', sans-serif;
+		font-weight:800;
+		text-align:center;
+		letter-spacing:1px;
+		font-size:28px;
+		padding:$hr_padding 0 $hr_padding/2 0;
+	}
+
+	p{
+		font-family:'open_sansregular';
+		font-size:20px;
+		line-height:$line_height;
+		padding:0 $hr_padding/2 $hr_padding $hr_padding/2;
+    	text-align: justify;
+    	text-align-last: center;
+	}
+	
+}

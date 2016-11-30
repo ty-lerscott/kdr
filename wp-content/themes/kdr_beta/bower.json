@@ -1,0 +1,23 @@
+{
+  "name": "kdr_beta",
+  "homepage": "https://github.com/tsw38/kdr_beta",
+  "authors": [
+    "Tyler Williams <tyler.scott.14@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "isotope": "^2.2.2",
+    "imagesloaded": "^4.1.0"
+  }
+}

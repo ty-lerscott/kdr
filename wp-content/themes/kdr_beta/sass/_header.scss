@@ -1,0 +1,185 @@
+header{
+	height:60px;
+	width:100%;
+	background-color:$navy;
+	font-family:'Myriad Pro', sans-serif;
+
+	.logo{
+		color:white;
+		text-decoration:none;
+		font-size:20px;
+		height: 60px;
+		display: inline-block;
+		vertical-align: baseline;
+		line-height: 60px;
+		padding-left: 20px;
+		&:hover{
+			color:$princeton;
+		}
+	}
+
+	.menu{
+	    font-weight: 500;
+	    display: inline-block;
+	    text-align: right;
+	    float: right;
+	    height: 60px;
+	    line-height: 60px;
+	    padding-right:60px;
+
+		& > #menu-header_menu{
+			list-style-type: none;
+
+			& > li{
+				display: inline;
+
+				> a {
+					text-decoration:none;
+					font-size:18px;
+					color:white;
+			    padding: 21px 14px 20px;
+
+			    &:hover{
+			    	background-color:$princeton;
+					}
+				}
+			}
+
+			& > .menu-item-has-children{
+				padding-bottom:25px;
+				& > a{
+					&:after{
+						content: '\25bc';
+						font-size: 8px;
+						position: relative;
+						left: 7px;
+						bottom: 1px;
+					}
+				}
+
+				&:hover{
+					&>.sub-menu{
+						display: block;
+					}
+				}
+				
+			}
+		}
+
+		.sub-menu{
+			display:none;
+			text-align:left;
+			background-color:$navy;
+			position: absolute;
+			top:91px;
+			right:0;
+			width: 146px;
+			min-width:100px;
+			overflow:hidden;
+			border-bottom-left-radius:10px;
+			z-index:20;
+
+	    li{
+	    	height:35px;
+	    	line-height:35px;
+	    	font-size: 14px;
+	    	
+	    	&:first-child{
+	    		border-top:1px solid white;
+	    	}
+	    	&:not(:last-child){
+	    		border-bottom:1px solid white;
+	    	}
+
+	    	&:hover{
+	    		background-color:$princeton;
+	    	}
+	    }
+
+      a{
+      	color:white;
+      	text-decoration:none;
+      	padding:9px 50px 10px 20px;
+  	    line-height: 13px;
+
+      	&:hover{
+      		background-color:$princeton;
+      	}
+      }
+		}
+	}
+
+	.menu ul li:hover > a{
+		background-color:$princeton;
+	}
+
+	@media #{$large} {
+		.logo{
+			font-size: 18px;
+		}
+		
+		.menu{
+			padding-right: 20px;
+
+			> #menu-header_menu > li > a {
+		  	padding: 21px 9px;
+		    font-size: 15px;
+			}
+
+			.sub-menu{
+  				width:124px;
+  			}
+		}
+	}
+
+	@media #{$medium} {
+		.menu{
+			padding-right: 20px;
+
+			> #menu-header_menu > li > a {
+		  	padding: 21px 9px;
+		    font-size: 12px;
+		        letter-spacing: 1px;
+			}
+
+			.sub-menu{
+  			width:124px;
+  		}
+		}
+	}
+	@media #{$xmedium} {
+		.menu{
+			background: url('../images/hamburger.png');
+			background-repeat: no-repeat;
+			background-size: 25px auto;
+		  padding: 0 20px 0 50px;
+		  background-position: 20px 15px;
+
+			&:hover{
+				cursor:pointer;
+			}
+
+			ul{
+				display:none;
+			}
+
+			&:active{
+				ul{
+					display:block;
+				}
+			}
+		}
+	}
+
+	@media #{$small} {
+		.logo {
+	    font-size: 14px;
+	    font-weight: 600;
+	    padding-left:10px;
+		}
+		.menu{
+			padding: 0px 25px;
+	    background-position: 10px 15px;
+		}
+	}
+} //end of header

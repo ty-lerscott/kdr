@@ -1,0 +1,31 @@
+@import "universal";
+@import "mixins";
+@import "breakpoints";
+.home{
+	.page-wrapper{
+		width:1120px;
+		margin:0 auto;
+
+		@media #{$xlarge} {
+			width:960px;
+		}
+		@media #{$large} {
+			width:768px;
+		}
+		@media #{$medium} {
+			width:680px;
+		}
+		@media #{$xmedium} {
+			width:560px;
+		}
+		@media #{$_560px} {
+			width:480px;
+		}
+		@media #{$small} {
+			width: 360px;
+		}
+		@media #{$xsmall} {
+			width: 320px;
+		}
+	}
+}

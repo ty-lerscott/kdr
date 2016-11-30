@@ -1,0 +1,47 @@
+/* line 5, ../sass/home.scss */
+.home .page-wrapper {
+  width: 1120px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1120px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 680px;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 560px;
+  }
+}
+@media screen and (max-width: 560px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 5, ../sass/home.scss */
+  .home .page-wrapper {
+    width: 320px;
+  }
+}

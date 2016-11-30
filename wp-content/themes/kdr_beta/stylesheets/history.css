@@ -1,0 +1,23 @@
+/* line 5, ../sass/history.scss */
+section.history {
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=greek,latin);
+  font-family: 'open_sanssemibold';
+}
+/* line 9, ../sass/history.scss */
+section.history h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding: 40px 0 20px 0;
+}
+/* line 18, ../sass/history.scss */
+section.history p {
+  font-family: 'open_sansregular';
+  font-size: 20px;
+  line-height: 26px;
+  padding: 0 20px 40px 20px;
+  text-align: justify;
+  text-align-last: center;
+}

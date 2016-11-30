@@ -1,0 +1,127 @@
+@import "../fonts/bebas_neue/stylesheet.css";
+
+section.hero_banner{
+	font-family:"bebas_neuebold", sans-serif;
+	max-height:600px;
+	height:547px;
+	background-size:cover;
+	position:relative;
+
+	.barker_content{
+	    position: absolute;
+	    z-index: 15;
+	    width: 100%;
+	    height:100%;
+	    text-align: center;
+	    color: white;
+	    text-transform: uppercase;
+	    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.60);
+	    
+	    h1{
+	    	letter-spacing: 5px;
+		    font-size: 9rem;
+		    margin-top:9.5rem;
+	    }
+
+	    h2{
+		    font-size: 3.5rem;
+		    letter-spacing: 5px;
+		    position: relative;
+		    bottom: 10px;
+	    }
+	}
+
+	.hero_banner_overlay{
+		height:100%;
+		width:100%;
+		background-color:$middleberry;
+		@include opacity(0.75);
+		position:absolute;
+		z-index:10;
+	}
+
+	figure{
+		img{
+			height: 100%;
+			position: relative;
+			right: 15%;
+		}
+	}
+	@media screen and (min-width:1920px){
+		overflow-y:hidden;
+		figure img{
+			height:auto;
+			width:100%;
+			right:0;
+		}
+	}
+
+	@media screen and (min-width:1665px) and (max-width:1919px){
+		figure img{
+			right:0;
+		}
+	}
+
+	@media #{$between_lm} {
+		height:460px;
+		
+		.barker_content{
+			h1{
+				font-size:7rem;
+			}
+			h2{
+				font-size:3rem;
+			}
+		}
+		figure{
+			img{
+				height: 460px;
+				right:50%;
+			}
+		}
+	}
+	@media #{$medium} {
+		.barker_content{
+			h1{
+				font-size:6rem;
+			}
+			h2{
+				font-size:3rem;
+			}
+		}
+		figure img{
+			right:45%;
+		}
+	}
+	@media #{$between_ms} {
+		height:300px;
+
+		.barker_content{
+			h1{
+				font-size:4rem;
+				margin-top:7rem;
+			}
+			h2{
+				font-size:2rem;
+				bottom:5px;
+			}
+		}
+		figure{
+			img{
+				height: 300px;
+				right:70%;
+			}
+		}
+	}
+	@media #{$between_sxs} {
+		.barker_content{
+			h1{
+				font-size:2.7rem;
+			}
+			h2{
+				font-size:1.8rem;
+				bottom:2px;
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+@import "universal";
+@import "mixins";
+@import "breakpoints";
+
+.about{
+	@import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=greek,latin);
+	font-family:'open_sanssemibold';
+	.positioning_wrapper{position:absolute;z-index:10;}
+
+	.section1{
+		padding-top:$hr_padding;
+		padding-bottom:40px;
+	}
+
+	.section2{
+		height:1067px;
+		
+		h2{    
+			text-align: center;
+		    font-size: 30px;
+		    color: white;
+		    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.6);
+		    padding-top: 60px;
+		    padding-bottom: 10px;
+		}
+		p{ color:white; padding:18px 0 40px;}
+
+		@media #{$xlarge} {
+			height:1146px;
+		}
+		@media #{$large} {
+			height:1354px;
+		}
+		@media #{$medium} {
+			height:1457px;
+		}
+		@media #{$xmedium} {
+			height:1692px;
+		}
+		@media #{$_560px} {
+			height:1900px;
+		}
+		@media #{$small} {
+			height:2423px;
+			h2{ width: 360px; margin: 0;}
+		}
+		@media #{$xsmall} {
+			height:2575px;
+		}
+	}
+
+	.section3{
+		h2{    
+			text-align: center;
+		    font-size: 30px;
+		    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.6);
+		    padding-top: 60px;
+		    padding-bottom: 40px;
+		}
+		p{
+
+    		text-align-last: left;
+		}
+		@media #{$small} {
+			h2{ width: 360px; margin: 0;}
+		}
+	}
+
+	.section4{
+		height:860px;
+		h2{    
+			text-align: center;
+		    font-size: 30px;
+		    color: white;
+		    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.6);
+		    padding-top: 60px;
+		    padding-bottom: 10px;
+		}
+		p{ color:white; padding:18px 0 40px;}
+
+		@media #{$xlarge} {
+			height:938px;
+		}
+		@media #{$large} {
+			height:990px;
+
+		}
+		@media #{$medium} {
+			height:1068px;
+
+		}
+		@media #{$xmedium} {
+			height:1198px;
+
+		}
+		@media #{$_560px} {
+			height:1328px;
+
+		}
+		@media #{$small} {
+			height:1644px;
+			h2{ width: 360px; margin: 0;}
+
+		}
+		@media #{$xsmall} {
+			height:2575px;
+
+		}
+
+	}
+
+	.section5 p{
+		padding: 20px 0;
+		font-size: 15px;
+		line-height: 15px;
+	}
+
+	p{
+		font-family:'open_sansregular';
+		font-size:20px;
+		line-height:$line_height;
+    	text-align: justify;
+    	text-align-last: left;
+	}
+
+	
+}
