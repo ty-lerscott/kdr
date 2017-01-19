@@ -1,0 +1,18 @@
+@import
+  "compass/reset",
+  "fonts",
+  "colors";
+
+html,body{
+  font-family:'Open Sans';
+}
+
+.wrapper{
+  width: 95%;
+  max-width:1600px;
+  display:block;
+  margin:0 auto;
+}
+
+@import
+  "header";

@@ -1,185 +1,177 @@
-header{
-	height:60px;
-	width:100%;
-	background-color:$navy;
-	font-family:'Myriad Pro', sans-serif;
+header {
+  height: 60px;
+  width: 100%;
+  background-color: $navy_blue;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.75px;
 
-	.logo{
-		color:white;
-		text-decoration:none;
-		font-size:20px;
-		height: 60px;
-		display: inline-block;
-		vertical-align: baseline;
-		line-height: 60px;
-		padding-left: 20px;
-		&:hover{
-			color:$princeton;
-		}
-	}
 
-	.menu{
-	    font-weight: 500;
-	    display: inline-block;
-	    text-align: right;
-	    float: right;
-	    height: 60px;
-	    line-height: 60px;
-	    padding-right:60px;
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 60px;
 
-		& > #menu-header_menu{
-			list-style-type: none;
+    &:hover {
+      color: $orange;
+    }
+  }
 
-			& > li{
-				display: inline;
+  .menu {
+    font-weight: 500;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    height: 60px;
+    line-height: 60px;
 
-				> a {
-					text-decoration:none;
-					font-size:18px;
-					color:white;
-			    padding: 21px 14px 20px;
+    > #menu-header_menu {
+      list-style-type: none;
 
-			    &:hover{
-			    	background-color:$princeton;
-					}
-				}
-			}
+      > li {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px;
+        line-height:59px;
+        height:60px;
+        cursor:pointer;
 
-			& > .menu-item-has-children{
-				padding-bottom:25px;
-				& > a{
-					&:after{
-						content: '\25bc';
-						font-size: 8px;
-						position: relative;
-						left: 7px;
-						bottom: 1px;
-					}
-				}
+        &:hover {
+          background-color: $orange;
+        }
 
-				&:hover{
-					&>.sub-menu{
-						display: block;
-					}
-				}
-				
-			}
-		}
+        &:last-of-type{
+          text-align:left;
+          position:relative;
 
-		.sub-menu{
-			display:none;
-			text-align:left;
-			background-color:$navy;
-			position: absolute;
-			top:91px;
-			right:0;
-			width: 146px;
-			min-width:100px;
-			overflow:hidden;
-			border-bottom-left-radius:10px;
-			z-index:20;
+          &:hover{
+            ul{
+              display:block;
+            }
+          }
 
-	    li{
-	    	height:35px;
-	    	line-height:35px;
-	    	font-size: 14px;
-	    	
-	    	&:first-child{
-	    		border-top:1px solid white;
-	    	}
-	    	&:not(:last-child){
-	    		border-bottom:1px solid white;
-	    	}
+          ul{
+            display:none;
+            position:absolute;
+            right:0;
+            top:60px;
+            text-align:right;
+            background-color:$navy_blue;
 
-	    	&:hover{
-	    		background-color:$princeton;
-	    	}
-	    }
+            li{
+              display:block;
+              line-height:1;
 
-      a{
-      	color:white;
-      	text-decoration:none;
-      	padding:9px 50px 10px 20px;
-  	    line-height: 13px;
+              a{
+                padding:15px;
+                display:block;
+                color:white;
+                text-decoration:none;
+                cursor:pointer;
 
-      	&:hover{
-      		background-color:$princeton;
-      	}
+                &:hover{
+                  background-color:$orange;
+                }
+              }
+            }
+          }
+        }
+
+        > a {
+          text-decoration: none;
+          font-size: 18px;
+          color: white;
+          display:block;
+        }
       }
-		}
-	}
 
-	.menu ul li:hover > a{
-		background-color:$princeton;
-	}
+      > .menu-item-has-children{
+        > a{
+          &:after {
+            content: '\25bc';
+            font-size: 8px;
+            position: relative;
+            left: 7px;
+            bottom: 1px;
+          }
+        }
+      }
+    }
+  }
 
-	@media #{$large} {
-		.logo{
-			font-size: 18px;
-		}
-		
-		.menu{
-			padding-right: 20px;
+  @media (max-width:880px){
+    .logo{
+      font-size:17px;
+    }
 
-			> #menu-header_menu > li > a {
-		  	padding: 21px 9px;
-		    font-size: 15px;
-			}
+    .menu>#menu-header_menu>li>a{
+      font-size:16px;
+    }
+  }
 
-			.sub-menu{
-  				width:124px;
-  			}
-		}
-	}
+  @media (max-width:768px){
+    .logo{
+      font-size:16px;
+    }
 
-	@media #{$medium} {
-		.menu{
-			padding-right: 20px;
+    .menu{
+      &.active{
 
-			> #menu-header_menu > li > a {
-		  	padding: 21px 9px;
-		    font-size: 12px;
-		        letter-spacing: 1px;
-			}
+        > #menu-header_menu{
+          display:block;
+          background-color:$navy_blue;
+        }
+      }
+      .mobile-toggle{
+        height:60px;
+        width:45px;
+        cursor:pointer;
+        margin: 0 0 0 auto;
 
-			.sub-menu{
-  			width:124px;
-  		}
-		}
-	}
-	@media #{$xmedium} {
-		.menu{
-			background: url('../images/hamburger.png');
-			background-repeat: no-repeat;
-			background-size: 25px auto;
-		  padding: 0 20px 0 50px;
-		  background-position: 20px 15px;
+        &:hover{
+          span{
+            background-color:$orange;
+          }
+        }
 
-			&:hover{
-				cursor:pointer;
-			}
+        span{
+          display:block;
+          height:5px;
+          width:100%;
+          background-color:white;
+          position:relative;
 
-			ul{
-				display:none;
-			}
+          &:nth-of-type(1){ top:14px; }
+          &:nth-of-type(2){ top:22px; }
+          &:nth-of-type(3){ top:30px; }
+        }
+      }
+      > #menu-header_menu{
+        display:none;
+      }
+    }
+  }
+  @media (max-width:480px){
+    .logo{
+      width: 147px;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
 
-			&:active{
-				ul{
-					display:block;
-				}
-			}
-		}
-	}
+    .menu .mobile-toggle{
+      width:40px;
 
-	@media #{$small} {
-		.logo {
-	    font-size: 14px;
-	    font-weight: 600;
-	    padding-left:10px;
-		}
-		.menu{
-			padding: 0px 25px;
-	    background-position: 10px 15px;
-		}
-	}
-} //end of header
+      span{
+        height:4px;
+
+        &:nth-of-type(1){ top:17px; }
+        &:nth-of-type(2){ top:25px; }
+        &:nth-of-type(3){ top:33px; }
+      }
+    }
+  }
+}
