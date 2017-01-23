@@ -3,6 +3,7 @@
 		menu: function(){
 			$('.menu .mobile-toggle').on('click', function(e){
 				$(this).parent().toggleClass('active');
+				$('header').toggleClass('active');
 			});
 		}
 	};

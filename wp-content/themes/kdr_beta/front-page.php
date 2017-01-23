@@ -33,11 +33,34 @@ endforeach;
 
 $rand_num = rand(0, sizeOf($herobanner_images)-1);
 $rand_img = $herobanner_images[$rand_num]['image'];
+$background = "background:url($rand_img);";
+$background .="background-size:cover;";
+$background .="background-position:center center;";
 
 get_header();
 
 ?>
 
+<div id="page" class="site">
+	<div id="content" class="site-content">
+		<section class="hero_banner" style="<?php echo($background); ?>">
+			<div class="barker_content">
+				<h1><?php echo($herobanner_text); ?></h1>
+				<h2><?php echo($herobanner_subtext); ?></h2>
+			</div>
+			<div class="hero_banner_overlay"></div>
+			<figure>
+			</figure>
+		</section>
+	</div>
+
+	<!-- <section class="section5">
+		<div class="map_wrapper">
+			<?php
+			//  echo $map;
+			  ?>
+		</div>
+	</section> -->
 
 
 <?php get_footer();

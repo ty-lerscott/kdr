@@ -15,5 +15,28 @@ html,body{
   margin:0 auto;
 }
 
+.logged-in{
+  #page{
+    position:fixed;
+    top:92px;
+    left:0;
+    height:100%;
+    width:100%;
+
+    @media (max-width:782px){
+      top:106px;
+    }
+  }
+}
+
+#page{
+  position:fixed;
+  top:60px;
+  left:0;
+  height:100%;
+  width:100%;
+}
+
 @import
-  "header";
+  "header",
+  "hero-banner";

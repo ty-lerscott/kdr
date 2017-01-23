@@ -1,11 +1,37 @@
+.logged-in{
+  header{
+    top:32px;
+  }
+
+  @media (max-width:782px){
+    header{
+      top:46px;
+    }
+  }
+}
+
 header {
+  position:fixed;
+  z-index:100;
+  left:0;
+  top:0;
   height: 60px;
   width: 100%;
   background-color: $navy_blue;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.75px;
+  @include transition-property(height);
+  @include transition-duration(200ms);
+  @include transition-timing-function(ease-in-out);
 
+  &.active{
+    height:100%;
+    overflow:hidden;
+    @include transition-property(height);
+    @include transition-duration(400ms);
+    @include transition-timing-function(ease-in-out);
+  }
 
   .logo {
     color: white;
@@ -126,6 +152,7 @@ header {
           background-color:$navy_blue_opaque;
           display:block;
           position:absolute;
+          z-index:90;
           height:100%;
           width:100%;
           left:0;
@@ -222,4 +249,5 @@ header {
       }
     }
   }
+  // @media (max-width:)
 }
